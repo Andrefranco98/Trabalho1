@@ -27,7 +27,7 @@ public abstract class NoteRoomDatabase : RoomDatabase() {
                     var noteDao = database.noteDao()
 
                     // Delete all content here.
-                    noteDao.deleteAll()
+                    /*noteDao.deleteAll()
 
                     // Add sample notes.
                     var note = Note(1, "Estudar PM", "High")
@@ -36,7 +36,7 @@ public abstract class NoteRoomDatabase : RoomDatabase() {
                     noteDao.insert(note)
                     note = Note(3, "Cortar Relva", "Low")
                     noteDao.insert(note)
-
+*/
                 }
             }
         }

@@ -65,10 +65,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "teste2", Toast.LENGTH_SHORT).show()
                 true
             }
-            R.id.opt3->{
-                Toast.makeText(this, "teste3", Toast.LENGTH_SHORT).show()
-                true
-            }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
