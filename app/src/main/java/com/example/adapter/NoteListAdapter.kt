@@ -30,7 +30,7 @@ class NoteListAdapter internal constructor(
         holder.noteItemView.text = current.note
     }
 
-    internal fun setWords(words: List<Note>) {
+    internal fun setNotes(notes: List<Note>) {
         this.notes = notes
         notifyDataSetChanged()
     }

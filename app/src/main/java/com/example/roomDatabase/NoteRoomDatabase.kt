@@ -30,7 +30,7 @@ public abstract class NoteRoomDatabase : RoomDatabase() {
                     noteDao.deleteAll()
 
                     // Add sample notes.
-                    var note = Note(1, "Limpar Casa", "High")
+                    var note = Note(1, "Estudar PM", "High")
                     noteDao.insert(note)
                     note = Note(2, "Limpar Sala", "Low")
                     noteDao.insert(note)
