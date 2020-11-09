@@ -25,18 +25,17 @@ public abstract class NoteRoomDatabase : RoomDatabase() {
             INSTANCE?.let { database ->
                 scope.launch {
                     var noteDao = database.noteDao()
-
-                    // Delete all content here.
-                    /*noteDao.deleteAll()
+                    //Delete all content here.
+                   // noteDao.deleteAll()
 
                     // Add sample notes.
-                    var note = Note(1, "Estudar PM", "High")
-                    noteDao.insert(note)
-                    note = Note(2, "Limpar Sala", "Low")
-                    noteDao.insert(note)
-                    note = Note(3, "Cortar Relva", "Low")
-                    noteDao.insert(note)
-*/
+                   // var note = Note(1, "Estudar PM", "High")
+                   // noteDao.insert(note)
+                   // note = Note(2, "Limpar Sala", "Low")
+                    //noteDao.insert(note)
+                   // note = Note(3, "Cortar Relva", "Low")
+                    //noteDao.insert(note)
+
                 }
             }
         }

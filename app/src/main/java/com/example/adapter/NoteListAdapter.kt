@@ -5,16 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dataclass.Note
 import com.example.trabalho1.R
 
-class NoteListAdapter internal constructor(
-    context: Context
-) : RecyclerView.Adapter<NoteListAdapter.NoteViewHolder>() {
 
+class NoteListAdapter internal constructor(
+    context: Context,
+    ) : RecyclerView.Adapter<NoteListAdapter.NoteViewHolder>() {
+    private var notes: List<Note> = ArrayList()
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-    private var notes = emptyList<Note>() // Cached copy of words
+
+
+
 
     inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val noteItemView: TextView = itemView.findViewById(R.id.textView)
@@ -28,6 +32,7 @@ class NoteListAdapter internal constructor(
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val current = notes[position]
         holder.noteItemView.text = current.note
+
     }
 
     internal fun setNotes(notes: List<Note>) {
@@ -35,5 +40,14 @@ class NoteListAdapter internal constructor(
         notifyDataSetChanged()
     }
 
+
+
+
+
     override fun getItemCount() = notes.size
+
+    fun getNoteAt(position: Int): Note? {
+        return notes[position]
+    }
+
 }

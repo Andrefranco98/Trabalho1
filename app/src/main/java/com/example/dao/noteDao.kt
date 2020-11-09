@@ -1,15 +1,12 @@
 package com.example.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.dataclass.Note
 
 
 @Dao
-    interface NoteDao {
+   public interface NoteDao {
 
         @Query("SELECT * FROM note_table ORDER BY note ASC")
         fun getAlphabetizedWords(): LiveData<List<Note>>
@@ -19,4 +16,10 @@ import com.example.dataclass.Note
 
         @Query("DELETE FROM note_table")
         suspend fun deleteAll()
-    }
+
+        @Delete
+        fun delete(note: Note?)
+
+
+
+}

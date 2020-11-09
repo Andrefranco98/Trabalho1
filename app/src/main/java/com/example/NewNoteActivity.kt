@@ -2,11 +2,12 @@ package com.example
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+import com.example.dataclass.Note
 import com.example.trabalho1.R
 
 class NewNoteActivity : AppCompatActivity() {
@@ -19,6 +20,7 @@ class NewNoteActivity : AppCompatActivity() {
         setContentView(R.layout.activity_new_note)
         editNoteView = findViewById(R.id.edit_note)
         editPriorityView = findViewById(R.id.edit_priority)
+
 
         val button = findViewById<Button>(R.id.button_save)
         button.setOnClickListener {
@@ -41,4 +43,6 @@ class NewNoteActivity : AppCompatActivity() {
         const val EXTRA_REPLY_NOTE = "com.example.trabalho3.REPLY_NOTE"
         const val EXTRA_REPLY_PRIORITY = "com.example.trabalho3.REPLY_PRIORITY"
     }
+
+
 }

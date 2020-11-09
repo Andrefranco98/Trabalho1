@@ -5,6 +5,6 @@
     <string name="empty_not_saved">Word not saved because it is empty.</string>
     <string name="add_note">Add note</string>
     <string name="opt2">Edit</string>
-    <string name="opt1">Remove</string>
+    <string name="opt1">Remove all notes</string>
 
 </resources>

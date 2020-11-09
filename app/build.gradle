@@ -5,7 +5,9 @@ plugins {
 apply plugin: 'kotlin-kapt'
 
 android {
-
+    viewBinding {
+        enabled = true
+    }
     packagingOptions {
         exclude 'META-INF/atomicfu.kotlin_module'
     }
@@ -40,6 +42,13 @@ android {
 
 dependencies {
     implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
+
+    // glide image library
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    // volley http library
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
 
     // Dependencies for working with Architecture components
     // You'll probably have to update the version numbers in build.gradle (Project)
