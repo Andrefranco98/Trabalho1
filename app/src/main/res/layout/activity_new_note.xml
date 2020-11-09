@@ -7,7 +7,7 @@
     tools:context="com.example.NewNoteActivity">
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -28,10 +28,12 @@
             android:layout_height="wrap_content"
             android:minHeight="@dimen/min_height"
             android:fontFamily="sans-serif-light"
-            android:hint="@string/hint_word"
+            android:hint="@string/hint_priority"
             android:inputType="textAutoComplete"
             android:layout_margin="@dimen/big_padding"
             android:textSize="18sp" />
+
+
 
         <Button
             android:id="@+id/button_save"

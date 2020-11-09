@@ -70,6 +70,7 @@ class MainActivity : AppCompatActivity() {
             ItemTouchHelper(itemTouchHelperCallback).attachToRecyclerView(recyclerView)
 
 
+
         })
 
 
@@ -94,17 +95,14 @@ class MainActivity : AppCompatActivity() {
     //Menu de opções
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId){
-            R.id.delete_all_notes-> {
+            R.id.delete_all_notes -> {
                 noteViewModel.deleteAllNotes();
                 Toast.makeText(this, "All notes deleted", Toast.LENGTH_SHORT).show();
                 val intent = Intent(this@MainActivity, NewNoteActivity::class.java)
                 startActivityForResult(intent, newNoteActivityRequestCode)
                 true
             }
-           // R.id.opt2 -> {
-               // Toast.makeText(this, "teste2", Toast.LENGTH_SHORT).show()
-             //   true
-           // }
+
 
             else -> super.onOptionsItemSelected(item)
         }
@@ -117,7 +115,7 @@ class MainActivity : AppCompatActivity() {
             val pnote = data?.getStringExtra(NewNoteActivity.EXTRA_REPLY_NOTE)
             val ppriority = data?.getStringExtra(NewNoteActivity.EXTRA_REPLY_PRIORITY)
 
-            if (pnote!= null && ppriority != null) {
+            if (pnote!= null && ppriority != null ) {
                 val note = Note(note = pnote, priority = ppriority)
                 noteViewModel.insert(note)
             }
